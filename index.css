@@ -1,0 +1,114 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(102, 103, 171);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 50%;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.todo-input {
+    width: 90%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: medium;
+    outline: none;
+}
+
+.todo-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    opacity: 0.5;
+}
+
+.todo-input:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.add-btn {
+    width: 80%;
+    padding: 12px 15px;
+    background: rgb(255, 111, 97);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: medium;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.add-btn:hover {
+    background: rgb(255, 133, 110);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.todo-list {
+    list-style: none;
+    width: 99%;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    text-transform: capitalize;
+    padding: 12px 15px;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.todo-item span {
+    font-size: medium;
+    color: white;
+}
+
+.actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    font-size: medium;
+}
+
+.edit {
+    color: rgb(0, 183, 218);
+}
+
+.edit:hover {
+    color: rgb(0, 175, 244);
+}
+
+.delete {
+    color: #ff1700;
+}
+
+.delete:hover {
+    color: #ff2914;
+}
