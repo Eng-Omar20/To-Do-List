@@ -1,5 +1,8 @@
 const todoList = document.getElementById("todo-list");
 
+const addBtn = document.getElementById("add-btn");
+const updateBtn = document.getElementById("update-btn");
+
 function addTask() {
   const input = document.getElementById("todo-input");
   const taskText = input.value.trim();
@@ -21,7 +24,7 @@ function addTask() {
   const editButton = document.createElement("button");
   editButton.textContent = "Edit";
   editButton.className = "edit";
-  editButton.onclick = () => editTask(taskSpan);
+  editButton.onclick = () => editTask(taskSpan, listItem);
 
   const deleteButton = document.createElement("button");
   deleteButton.textContent = "Delete";
@@ -38,11 +41,17 @@ function addTask() {
   input.value = "";
 }
 
+let currentValue;
+
 function editTask(taskSpan) {
-  const newTask = prompt("Edit your task:", taskSpan.textContent);
-  if (newTask !== null) {
-    taskSpan.textContent = newTask.trim();
-  }
+  const input = document.getElementById("todo-input");
+
+  addBtn.style.display = "none";
+  updateBtn.style.display = "inline-block";
+
+  currentValue = taskSpan;
+
+  input.value = taskSpan.textContent;
 }
 
 function deleteTask(listItem) {
@@ -50,3 +59,15 @@ function deleteTask(listItem) {
     todoList.removeChild(listItem);
   }
 }
+
+const updateTask = () => {
+  const input = document.getElementById("todo-input");
+  updateBtn.style.display = "none";
+  addBtn.style.display = "inline-block";
+
+  const updatedVal = input.value;
+
+  currentValue.textContent = updatedVal;
+
+  input.value = "";
+};

@@ -15,9 +15,11 @@
         class="todo-input"
         placeholder="Enter a new task"
       />
-      <button class="add-btn" onclick="addTask()">Add Task</button>
+      <button class="add-btn" id="add-btn" onclick="addTask()">Add Task</button>
+      <button style="display: none;" class="add-btn" id="update-btn" onclick="updateTask()">Update Task</button>
       <ul id="todo-list" class="todo-list"></ul>
     </div>
     <script src="index.js"></script>
+    <script src="local-storage.js"></script>
   </body>
 </html>
